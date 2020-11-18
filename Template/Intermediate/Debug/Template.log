@@ -1,22 +1,77 @@
-﻿  Bullet.cpp
-D:\School\Github\GAME2005_A3\src\Bullet.cpp(8,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+﻿  BulletPool.cpp
+  EndScene.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  EventManager.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\EventManager.cpp(119,29): warning C4018: '<': signed/unsigned mismatch
+D:\School\Github\GAME2005_A3\src\EventManager.cpp(178,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\School\Github\GAME2005_A3\src\Bullet.cpp(9,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\EventManager.cpp(179,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\School\Github\GAME2005_A3\src\Bullet.cpp(26,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+  Game.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  PlayScene.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\PlayScene.cpp(142,44): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\School\Github\GAME2005_A3\src\Bullet.cpp(26,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\PlayScene.cpp(143,45): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
+  Scene.cpp
+  Scene1.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\Scene1.cpp(102,38): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+D:\School\Github\GAME2005_A3\src\Scene1.cpp(114,38): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  Scene2.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  StartScene.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  TextureManager.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(137,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(137,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(138,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(138,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(180,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(180,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(181,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(181,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(197,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(197,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(225,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(225,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(232,32): warning C4018: '>': signed/unsigned mismatch
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(260,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(260,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(261,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(261,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(290,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(290,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(291,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(291,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(310,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\TextureManager.cpp(311,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  main.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   Template.vcxproj -> D:\School\Github\GAME2005_A3\bin\Debug\Template.exe

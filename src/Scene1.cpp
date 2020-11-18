@@ -9,6 +9,8 @@
 Scene1::Scene1()
 {
 	Scene1::start();
+
+
 }
 Scene1::~Scene1()
 = default;
@@ -30,8 +32,23 @@ void Scene1::draw()
 
 void Scene1::update()
 {
-
 	updateDisplayList();
+
+	if (SDL_GetTicks() - bulletSpawnTimerStart >= bulletSpawnTimerDuration)
+	{
+		SpawnBullet();
+	}
+
+	std::vector<Bullet*> activeBullets = m_pPool->allBull;
+	for (std::vector<Bullet*>::iterator myiter = activeBullets.begin(); myiter != activeBullets.end(); ++myiter)
+	{
+		Bullet* bullet = *myiter;
+		if (bullet->active && bullet->getTransform()->position.y >= 650)
+		{
+			m_pPool->Despawn(bullet);
+			break;
+		}
+	}
 }
 
 void Scene1::clean()
@@ -74,10 +91,27 @@ void Scene1::start()
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
 
-	// Enemy Sprite
-	m_pBullet = new Bullet();
-	addChild(m_pBullet);
+	m_pPool = new BulletPool(10);
 
+	for (std::vector<Bullet*>::iterator myiter = m_pPool->allBull.begin(); myiter != m_pPool->allBull.end(); ++myiter)
+	{
+		Bullet* bullet = *myiter;
+		addChild(bullet);
+	}
+
+	bulletSpawnTimerStart = SDL_GetTicks();
+
+}
+
+void Scene1::SpawnBullet()
+{
+	Bullet* bullet = m_pPool->Spawn();
+	if (bullet)
+	{
+		bullet->getTransform()->position = glm::vec2(50 + rand() % 700, 0);
+	}
+
+	bulletSpawnTimerStart = SDL_GetTicks();
 }
 
 

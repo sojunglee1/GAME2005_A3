@@ -8,7 +8,8 @@
 #include "Detonator.h"
 #include "Button.h"
 #include "Label.h"
-#include "Bullet.h"
+#include "Bullet.h".
+#include "BulletPool.h"
 
 class Scene1 : public Scene
 {
@@ -23,6 +24,8 @@ public:
 	virtual void handleEvents() override;
 	virtual void start() override;
 
+	void SpawnBullet();
+
 
 private:
 	// IMGUI Function
@@ -30,10 +33,12 @@ private:
 
 	std::string m_guiTitle;
 
+	const float bulletSpawnTimerDuration = 1000.0f;
+	float bulletSpawnTimerStart;
+
 	glm::vec2 m_mousePosition;
 
-	Bullet* m_pBullet;
-
+	BulletPool* m_pPool;
 };
 
 #endif /* defined (__PLAY_SCENE__) */
