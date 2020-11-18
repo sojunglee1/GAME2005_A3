@@ -1,150 +1,8 @@
-﻿  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_widgets.cpp
-  imgui_sdl.cpp
-  Button.cpp
-D:\School\Github\GAME2005_A3\src\Button.cpp(22,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Button.cpp(23,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Button.cpp(38,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Button.cpp(38,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  CollisionManager.cpp
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(9,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(9,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(10,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(10,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(20,72): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(20,24): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(57,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(57,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(58,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(58,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(59,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(59,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(60,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(60,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(174,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(183,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(183,25): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(185,38): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(185,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(188,60): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(188,50): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(214,19): warning C4244: 'return': conversion from '_Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(221,35): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(221,25): warning C4244: 'initializing': conversion from 'const _Ty' to 'const int', possible loss of data
-          with
-          [
-              _Ty=float
-          ]
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(224,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(226,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(303,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(303,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(304,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(304,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  Detonator.cpp
-D:\School\Github\GAME2005_A3\src\Detonator.cpp(30,51): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Detonator.cpp(30,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Sprite.cpp
-  UIControl.cpp
-D:\School\Github\GAME2005_A3\src\UIControl.cpp(33,101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\School\Github\GAME2005_A3\src\UIControl.cpp(33,88): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  DisplayObject.cpp
+﻿  Scene1.cpp
+  Scene2.cpp
   EndScene.cpp
-  FontManager.cpp
   Game.cpp
-  GameController.cpp
   GameObject.cpp
-  Label.cpp
-D:\School\Github\GAME2005_A3\src\Label.cpp(15,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(16,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(30,52): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(30,49): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(52,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(53,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(71,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Label.cpp(72,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
   PlayScene.cpp
 D:\School\Github\GAME2005_A3\src\PlayScene.cpp(142,44): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
@@ -158,76 +16,6 @@ D:\School\Github\GAME2005_A3\src\PlayScene.cpp(143,45): warning C4244: '=': conv
           ]
   main.cpp
 D:\School\Github\GAME2005_A3\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Plane.cpp
-D:\School\Github\GAME2005_A3\src\Plane.cpp(30,55): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Plane.cpp(30,52): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Generating Code...
-  Compiling...
-  Player.cpp
-D:\School\Github\GAME2005_A3\src\Player.cpp(30,49): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Player.cpp(30,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Renderer.cpp
-  Scene.cpp
-  ship.cpp
-D:\School\Github\GAME2005_A3\src\ship.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\ship.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\ship.cpp(37,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\ship.cpp(37,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\ship.cpp(149,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\School\Github\GAME2005_A3\src\ship.cpp(149,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  SoundManager.cpp
-D:\School\Github\GAME2005_A3\src\SoundManager.cpp(146,27): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-D:\School\Github\GAME2005_A3\src\SoundManager.cpp(146,20): warning C4244: 'initializing': conversion from '_Ty' to 'const int', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-D:\School\Github\GAME2005_A3\src\SoundManager.cpp(148,28): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-D:\School\Github\GAME2005_A3\src\SoundManager.cpp(148,21): warning C4244: 'initializing': conversion from '_Ty' to 'const int', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
   EventManager.cpp
 D:\School\Github\GAME2005_A3\src\EventManager.cpp(119,29): warning C4018: '<': signed/unsigned mismatch
 D:\School\Github\GAME2005_A3\src\EventManager.cpp(178,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
@@ -240,29 +28,7 @@ D:\School\Github\GAME2005_A3\src\EventManager.cpp(179,37): warning C4244: '=': c
           [
               T=float
           ]
-  SpriteSheet.cpp
   StartScene.cpp
-  Target.cpp
-D:\School\Github\GAME2005_A3\src\Target.cpp(10,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Target.cpp(11,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Target.cpp(29,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Target.cpp(29,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
   TextureManager.cpp
 D:\School\Github\GAME2005_A3\src\TextureManager.cpp(137,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 D:\School\Github\GAME2005_A3\src\TextureManager.cpp(137,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
@@ -600,4 +366,14 @@ D:\School\Github\GAME2005_A3\src\Util.cpp(411,23): warning C4244: '=': conversio
 D:\School\Github\GAME2005_A3\src\Util.cpp(421,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 D:\School\Github\GAME2005_A3\src\Util.cpp(430,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Generating Code...
+  LINK : D:\School\Github\GAME2005_A3\bin\Debug\Template.exe not found or not built by the last incremental link; performing full link
+SpriteSheet.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'SpriteSheet.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+SoundManager.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'SoundManager.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+Renderer.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'Renderer.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+GameController.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'GameController.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+FontManager.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'FontManager.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+imgui_widgets.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'imgui_widgets.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+imgui_draw.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'imgui_draw.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+imgui_demo.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'imgui_demo.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
+imgui.obj : warning LNK4099: PDB 'vc142.pdb' was not found with 'imgui.obj' or at 'D:\School\Github\GAME2005_A3\bin\Debug\vc142.pdb'; linking object as if no debug info
   Template.vcxproj -> D:\School\Github\GAME2005_A3\bin\Debug\Template.exe

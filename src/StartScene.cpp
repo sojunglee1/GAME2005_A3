@@ -37,10 +37,20 @@ void StartScene::handleEvents()
 		TheGame::Instance()->quit();
 	}
 
-	if(EventManager::Instance().isKeyDown(SDL_SCANCODE_1))
+
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_1))
 	{
-		TheGame::Instance()->changeSceneState(PLAY_SCENE);
+		TheGame::Instance()->changeSceneState(SCENE_1);
 	}
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_2))
+	{
+		TheGame::Instance()->changeSceneState(SCENE_2);
+	}
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3))
+	{
+		TheGame::Instance()->changeSceneState(END_SCENE);
+	}
+
 }
 
 void StartScene::start()
@@ -74,7 +84,7 @@ void StartScene::start()
 	m_pStartButton->addEventListener(CLICK, [&]()-> void
 	{
 		m_pStartButton->setActive(false);
-		TheGame::Instance()->changeSceneState(PLAY_SCENE);
+		TheGame::Instance()->changeSceneState(START_SCENE);
 	});
 	
 	m_pStartButton->addEventListener(MOUSE_OVER, [&]()->void
