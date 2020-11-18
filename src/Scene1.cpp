@@ -9,22 +9,18 @@
 Scene1::Scene1()
 {
 	Scene1::start();
-
-
 }
 Scene1::~Scene1()
 = default;
 
 void Scene1::draw()
 {
-
 	//TextureManager::Instance()->draw("background", 0, 0);
 
 	if (EventManager::Instance().isIMGUIActive())
 	{
 		GUI_Function();
 	}
-
 
 	drawDisplayList();
 	//SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 255, 255, 255, 255);
@@ -60,25 +56,38 @@ void Scene1::handleEvents()
 {
 	EventManager::Instance().update();
 
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_ESCAPE))
-	{
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_ESCAPE)) {
 		TheGame::Instance()->quit();
 	}
 
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_0))
-	{
+	// moves Player
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_A))	{
+		m_pPlayer->moveLeft();
+	}
+	else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_D)){
+		m_pPlayer->moveRight();
+	}
+	else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_W)) {
+		m_pPlayer->moveUp();
+	}
+	else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_S)) {
+		m_pPlayer->moveDown();
+	}
+	else {
+		m_pPlayer->stopMoving();
+	}
+
+	// changes scene
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_0)){
 		TheGame::Instance()->changeSceneState(START_SCENE);
 	}
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_1))
-	{
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_1)){
 		TheGame::Instance()->changeSceneState(SCENE_1);
 	}
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_2))
-	{
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_2)){
 		TheGame::Instance()->changeSceneState(SCENE_2);
 	}
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3))
-	{
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3)){
 		TheGame::Instance()->changeSceneState(END_SCENE);
 	}
 
@@ -91,14 +100,16 @@ void Scene1::start()
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
 
-	m_pPool = new BulletPool(10);
+	// Player Sprite
+	m_pPlayer = new Player();
+	addChild(m_pPlayer);
 
+	m_pPool = new BulletPool(10);
 	for (std::vector<Bullet*>::iterator myiter = m_pPool->allBull.begin(); myiter != m_pPool->allBull.end(); ++myiter)
 	{
 		Bullet* bullet = *myiter;
 		addChild(bullet);
 	}
-
 	bulletSpawnTimerStart = SDL_GetTicks();
 
 }

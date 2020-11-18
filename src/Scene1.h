@@ -30,15 +30,15 @@ public:
 private:
 	// IMGUI Function
 	void GUI_Function();
-
 	std::string m_guiTitle;
-
-	const float bulletSpawnTimerDuration = 1000.0f;
-	float bulletSpawnTimerStart;
 
 	glm::vec2 m_mousePosition;
 
+	const float bulletSpawnTimerDuration = 1000.0f;
+	float bulletSpawnTimerStart;
 	BulletPool* m_pPool;
+
+	Player* m_pPlayer;
 };
 
 #endif /* defined (__PLAY_SCENE__) */
