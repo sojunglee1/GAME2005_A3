@@ -16,7 +16,7 @@ Scene1::~Scene1()
 void Scene1::draw()
 {
 
-	TextureManager::Instance()->draw("background", 0, 0);
+	//TextureManager::Instance()->draw("background", 0, 0);
 
 	if (EventManager::Instance().isIMGUIActive())
 	{
@@ -73,6 +73,10 @@ void Scene1::start()
 
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
+
+	// Enemy Sprite
+	m_pBullet = new Bullet();
+	addChild(m_pBullet);
 
 }
 

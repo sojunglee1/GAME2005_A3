@@ -8,6 +8,7 @@
 #include "Detonator.h"
 #include "Button.h"
 #include "Label.h"
+#include "Bullet.h"
 
 class Scene1 : public Scene
 {
@@ -30,6 +31,8 @@ private:
 	std::string m_guiTitle;
 
 	glm::vec2 m_mousePosition;
+
+	Bullet* m_pBullet;
 
 };
 
