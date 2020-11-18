@@ -62,9 +62,8 @@ float Util::clamp01(const float value)
 */
 float Util::distance(const glm::vec2 vecA, const glm::vec2 vecB)
 {
-	const auto x = vecB.x - vecA.x;
-	const auto y = vecB.y - vecA.y;
-	return sqrt((x * x) + (y * y));
+	// This has been removed for this exercise
+	return 0.0f;
 }
 
 /**
@@ -73,9 +72,8 @@ float Util::distance(const glm::vec2 vecA, const glm::vec2 vecB)
 */
 float Util::squaredDistance(const glm::vec2 vecA, const glm::vec2 vecB)
 {
-	const auto x = vecB.x - vecA.x;
-	const auto y = vecB.y - vecA.y;
-	return (x * x) + (y * y);
+	// This has been removed for this exercise
+	return 0.0f;
 }
 
 /**
@@ -84,9 +82,8 @@ float Util::squaredDistance(const glm::vec2 vecA, const glm::vec2 vecB)
 */
 float Util::magnitude(const glm::vec2 vec)
 {
-	const auto x = vec.x;
-	const auto y = vec.y;
-	return sqrt((x * x) + (y * y));
+	// You will need this
+	return 0.0f;
 }
 
 /**
@@ -95,9 +92,8 @@ float Util::magnitude(const glm::vec2 vec)
 */
 float Util::squaredMagnitude(glm::vec2 vec)
 {
-	const auto x = vec.x;
-	const auto y = vec.y;
-	return (x * x) + (y * y);
+	// This has been removed for this exercise
+	return 0.0f;
 }
 
 /**
@@ -109,17 +105,8 @@ float Util::squaredMagnitude(glm::vec2 vec)
  */
 glm::vec2 Util::limitMagnitude(glm::vec2 vector, const float magnitude)
 {
-	const auto length = Util::magnitude(vector);
-
-	if (length > magnitude) {
-		const auto limiter = magnitude / length;
-		vector.x *= limiter;
-		vector.y *= limiter;
-		return vector;
-	}
-	else {
-		return vector;
-	}
+	// This has been removed for this exercise
+	return vector;
 }
 
 /**
@@ -222,10 +209,8 @@ float Util::max(float a, float b)
 */
 glm::vec2 Util::negate(const glm::vec2 vec)
 {
-	glm::vec2 dest;
-	dest.x = -vec.x;
-	dest.y = -vec.y;
-	return dest;
+	// This has been removed for this exercise
+	return vec;
 }
 
 /**
@@ -234,10 +219,8 @@ glm::vec2 Util::negate(const glm::vec2 vec)
 */
 glm::vec2 Util::inverse(const glm::vec2 vec)
 {
-	glm::vec2 dest;
-	dest.x = 1.0 / vec.x;
-	dest.y = 1.0 / vec.y;
-	return dest;
+	// This has been removed for this exercise
+	return vec;
 }
 
 
@@ -247,16 +230,8 @@ glm::vec2 Util::inverse(const glm::vec2 vec)
 */
 glm::vec2 Util::normalize(const glm::vec2 vec)
 {
-	glm::vec2 dest;
-	auto x = vec.x;
-	auto y = vec.y;
-	auto length = (x * x) + (y * y);
-	if (length > 0) {
-		length = 1.0 / sqrt(length);
-		dest.x = vec.x * length;
-		dest.y = vec.y * length;
-	}
-	return dest;
+	// You will need this
+	return vec;
 }
 
 /**

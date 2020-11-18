@@ -15,11 +15,8 @@ public:
 	virtual void update() override;
 	virtual void clean() override;
 
-	// setters
-
-
 private:
-
+	void m_buildAnimations();
 };
 
 #endif /* defined (__PLANE__) */
