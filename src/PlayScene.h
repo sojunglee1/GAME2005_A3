@@ -8,6 +8,7 @@
 #include "Detonator.h"
 #include "Button.h"
 #include "Label.h"
+#include "Bullet.h"
 
 class PlayScene : public Scene
 {
