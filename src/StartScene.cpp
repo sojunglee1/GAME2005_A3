@@ -38,6 +38,10 @@ void StartScene::handleEvents()
 	}
 
 
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_0))
+	{
+		TheGame::Instance()->changeSceneState(START_SCENE);
+	}
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_1))
 	{
 		TheGame::Instance()->changeSceneState(SCENE_1);
@@ -77,26 +81,47 @@ void StartScene::start()
 	m_pShip->getTransform()->position = glm::vec2(400.0f, 300.0f); 
 	addChild(m_pShip); 
 
-	// Start Button
-	m_pStartButton = new Button();
-	m_pStartButton->getTransform()->position = glm::vec2(400.0f, 400.0f); 
+	// Scene 1 Button
+	m_pScene1Button = new Button();
+	m_pScene1Button->getTransform()->position = glm::vec2(400.0f, 400.0f);
 
-	m_pStartButton->addEventListener(CLICK, [&]()-> void
+	m_pScene1Button->addEventListener(CLICK, [&]()-> void
 	{
-		m_pStartButton->setActive(false);
-		TheGame::Instance()->changeSceneState(START_SCENE);
+		m_pScene1Button->setActive(false);
+		TheGame::Instance()->changeSceneState(SCENE_1);
 	});
 	
-	m_pStartButton->addEventListener(MOUSE_OVER, [&]()->void
+	m_pScene1Button->addEventListener(MOUSE_OVER, [&]()->void
 	{
-		m_pStartButton->setAlpha(128);
+		m_pScene1Button->setAlpha(128);
 	});
 
-	m_pStartButton->addEventListener(MOUSE_OUT, [&]()->void
+	m_pScene1Button->addEventListener(MOUSE_OUT, [&]()->void
 	{
-		m_pStartButton->setAlpha(255);
+		m_pScene1Button->setAlpha(255);
 	});
-	addChild(m_pStartButton);
+	addChild(m_pScene1Button);
+	
+	// Start Button
+	m_pScene2Button = new Button();
+	m_pScene2Button->getTransform()->position = glm::vec2(400.0f, 400.0f);
+
+	m_pScene2Button->addEventListener(CLICK, [&]()-> void
+	{
+		m_pScene2Button->setActive(false);
+		TheGame::Instance()->changeSceneState(SCENE_2);
+	});
+	
+	m_pScene2Button->addEventListener(MOUSE_OVER, [&]()->void
+	{
+			m_pScene2Button->setAlpha(128);
+	});
+
+	m_pScene2Button->addEventListener(MOUSE_OUT, [&]()->void
+	{
+			m_pScene2Button->setAlpha(255);
+	});
+	addChild(m_pScene2Button);
 
 	
 }
