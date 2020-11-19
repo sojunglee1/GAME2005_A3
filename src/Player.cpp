@@ -45,19 +45,19 @@ void Player::clean()
 }
 
 void Player::moveLeft() {
-	getRigidBody()->velocity = glm::vec2(-SPEED, getRigidBody()->velocity.y);
+	getRigidBody()->velocity = glm::vec2(-SPEED, 0);
 }
 
 void Player::moveRight() {
-	getRigidBody()->velocity = glm::vec2(SPEED, getRigidBody()->velocity.y);
+	getRigidBody()->velocity = glm::vec2(SPEED, 0);
 }
 
 void Player::moveUp() {
-	getRigidBody()->velocity = glm::vec2(getRigidBody()->velocity.x, -SPEED);
+	getRigidBody()->velocity = glm::vec2(0, -SPEED);
 }
 
 void Player::moveDown() {
-	getRigidBody()->velocity = glm::vec2(getRigidBody()->velocity.x, SPEED);
+	getRigidBody()->velocity = glm::vec2(0, SPEED);
 }
 
 void Player::stopMoving() {

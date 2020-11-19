@@ -26,7 +26,7 @@ public:
 	float getDistance(GameObject*);
 
 private:
-	const float SPEED = 100.0f;
+	const float SPEED = 200.0f;
 	const float ACCELERATION = 10.0f;
 	glm::vec2 m_direction;
 };
