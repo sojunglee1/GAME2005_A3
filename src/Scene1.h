@@ -11,6 +11,8 @@
 #include "Bullet.h".
 #include "BulletPool.h"
 
+#include "CollisionManager.h"
+
 class Scene1 : public Scene
 {
 public:

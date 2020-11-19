@@ -15,6 +15,7 @@ int CollisionManager::squaredDistance(const glm::vec2 p1, const glm::vec2 p2)
 
 bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* object2)
 {
+
 	glm::vec2 P1 = object1->getTransform()->position;
 	glm::vec2 P2 = object2->getTransform()->position;
 	const int halfHeights = (object1->getHeight() + object2->getHeight()) * 0.5f;
@@ -30,8 +31,10 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 			case TARGET:
 				std::cout << "Collision with Target!" << std::endl;
 				SoundManager::Instance().playSound("yay", 0);
-
-				
+				break;
+			case BULLET:
+				std::cout << "Collision with Bullet!" << std::endl;
+				SoundManager::Instance().playSound("fire", 0);
 				break;
 			default:
 				
@@ -73,6 +76,11 @@ bool CollisionManager::AABBCheck(GameObject* object1, GameObject* object2)
 			switch (object2->getType()) {
 			case TARGET:
 				std::cout << "Collision with Target!" << std::endl;
+				SoundManager::Instance().playSound("yay", 0);
+				break;
+
+			case BULLET:
+				std::cout << "Collision with Bullet!" << std::endl;
 				SoundManager::Instance().playSound("yay", 0);
 				break;
 			default:

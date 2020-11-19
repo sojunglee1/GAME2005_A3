@@ -3,7 +3,7 @@
 
 Player::Player()
 {
-	TextureManager::Instance()->load("../Assets/textures/circle.png", "circle");
+	TextureManager::Instance()->load("../Assets/textures/plane.png", "circle");
 
 	auto size = TextureManager::Instance()->getTextureSize("circle");
 	setWidth(size.x);

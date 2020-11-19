@@ -45,6 +45,11 @@ void Scene1::update()
 			break;
 		}
 	}
+
+	for (auto bullets : activeBullets)
+	{
+		CollisionManager::squaredRadiusCheck(m_pPlayer, bullets);
+	}
 }
 
 void Scene1::clean()
@@ -90,12 +95,12 @@ void Scene1::handleEvents()
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3)){
 		TheGame::Instance()->changeSceneState(END_SCENE);
 	}
-
 }
 
 void Scene1::start()
 {
 	TextureManager::Instance()->load("../Assets/textures/background.png", "background");
+	SoundManager::Instance().load("../Assets/audio/Fire.wav", "fire", SoundType::SOUND_SFX);
 
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
@@ -110,8 +115,8 @@ void Scene1::start()
 		Bullet* bullet = *myiter;
 		addChild(bullet);
 	}
-	bulletSpawnTimerStart = SDL_GetTicks();
 
+	bulletSpawnTimerStart = SDL_GetTicks();
 }
 
 void Scene1::SpawnBullet()
