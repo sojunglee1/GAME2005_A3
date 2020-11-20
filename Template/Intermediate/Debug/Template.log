@@ -57,26 +57,9 @@ D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(311,38): warning C4244: 'i
 D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(311,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
 D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(312,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 D:\School\Github\GAME2005_A3\src\CollisionManager.cpp(312,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  Player.cpp
-D:\School\Github\GAME2005_A3\src\Player.cpp(9,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Player.cpp(10,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Player.cpp(28,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\School\Github\GAME2005_A3\src\Player.cpp(28,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
+  Scene1.cpp
+D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\School\Github\GAME2005_A3\src\Scene1.cpp(119,38): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+D:\School\Github\GAME2005_A3\src\Scene1.cpp(130,38): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
   Generating Code...
   Template.vcxproj -> D:\School\Github\GAME2005_A3\bin\Debug\Template.exe
