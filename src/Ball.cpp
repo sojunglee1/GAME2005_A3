@@ -44,9 +44,21 @@ void Ball::update()
 		getRigidBody()->velocity.x *= -0.75; // how much energy is lost (when hit the window sides)
 	}
 
+	if (getTransform()->position.x < 0)
+	{
+		getTransform()->position.x = 0;
+		getRigidBody()->velocity.x *= -0.75; // how much energy is lost (when hit the window sides)
+	}
+
 	if (getTransform()->position.y > 600 - getHeight())
 	{
 		getTransform()->position.y = 600 - getHeight();
+		getRigidBody()->velocity.y *= -0.75; // how much energy is lost (when hit the window top or bottom)
+	}
+
+	if (getTransform()->position.y < 0)
+	{
+		getTransform()->position.y = 0;
 		getRigidBody()->velocity.y *= -0.75; // how much energy is lost (when hit the window top or bottom)
 	}
 }

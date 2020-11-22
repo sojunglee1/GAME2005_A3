@@ -1,11 +1,35 @@
-﻿  Scene2.cpp
-D:\School\Github\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\School\Github\GAME2005_A3\src\Scene2.cpp(24,58): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+﻿  Ball.cpp
+D:\School\Github\GAME2005_A3\src\Ball.cpp(9,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\School\Github\GAME2005_A3\src\Scene2.cpp(25,55): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+D:\School\Github\GAME2005_A3\src\Ball.cpp(10,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\Ball.cpp(29,48): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\Ball.cpp(29,45): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\Ball.cpp(43,36): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\Ball.cpp(55,36): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME2005_A3\src\Ball.cpp(61,36): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
