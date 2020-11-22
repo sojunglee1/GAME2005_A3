@@ -13,6 +13,7 @@ Ball::Ball()
 	getRigidBody()->velocity = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->acceleration = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->isColliding = false;
+	getRigidBody()->mass = 1.0;
 	setType(BALL);
 }
 
@@ -30,7 +31,7 @@ void Ball::draw()
 
 void Ball::update()
 {
-	getRigidBody()->acceleration = glm::vec2(0, 9.8 * 3.0); // force = 9.8(acceleration) * mass
+	getRigidBody()->acceleration = glm::vec2(0, 9.8 * getRigidBody()->mass); // force = 9.8(acceleration) * mass
 
 	float deltaTime = 2.0f / 60.0f;
 

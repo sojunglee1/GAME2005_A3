@@ -15,7 +15,11 @@ Scene2::~Scene2()
 
 void Scene2::draw()
 {
-	drawDisplayList();
+
+	if (EventManager::Instance().isIMGUIActive())
+	{
+		GUI_Function();
+	}
 
 	brick.x = EventManager::Instance().getMousePosition().x - brick.w / 2,
 	brick.y = EventManager::Instance().getMousePosition().y,
@@ -25,12 +29,10 @@ void Scene2::draw()
 	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 0, 0, 255, 255);
 	SDL_RenderFillRect(Renderer::Instance()->getRenderer(), &brick);
 
-	if (EventManager::Instance().isIMGUIActive())
-	{
-		GUI_Function();
-	}
 
 	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 255, 255, 255, 255);
+
+	drawDisplayList();
 }
 
 void Scene2::update()
@@ -71,11 +73,12 @@ void Scene2::start()
 {
 	TextureManager::Instance()->load("../Assets/textures/background.png", "background");
 
+	// Set GUI Title
+	m_guiTitle = "Scene 2";
+
 	m_pBall = new Ball();
 	addChild(m_pBall);
 
-	// Set GUI Title
-	m_guiTitle = "Play Scene";
 }
 
 void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY, int32_t radius)
@@ -127,16 +130,9 @@ void Scene2::GUI_Function()
 
 	ImGui::Begin("Settings", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar);
 
-	if (ImGui::Button("Fire"))
-	{
-	}
+	ImGui::Separator();
 
-	else if (ImGui::Button("Reset"))
-	{
-	}
-
-	//ImGui::Separator();
-	//ImGui::SliderFloat("Range", &m_pPlaneSprite->getTransform()->position.x, 180.0f, 750.0f);
+	ImGui::SliderFloat("Mass", &m_pBall->getRigidBody()->mass, 1.0f, 10.0f);
 
 	ImGui::Separator();
 	//std::cout << "Velocity: " << newVelocity.x << std::endl;
