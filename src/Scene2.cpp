@@ -15,23 +15,29 @@ Scene2::~Scene2()
 
 void Scene2::draw()
 {
+	drawDisplayList();
 
-	TextureManager::Instance()->draw("background", 0, 0);
+	brick.x = EventManager::Instance().getMousePosition().x - brick.w / 2,
+	brick.y = EventManager::Instance().getMousePosition().y,
+	brick.w = 150,
+	brick.h = 15;
+
+	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 0, 0, 255, 255);
+	SDL_RenderFillRect(Renderer::Instance()->getRenderer(), &brick);
 
 	if (EventManager::Instance().isIMGUIActive())
 	{
 		GUI_Function();
 	}
 
-
-	drawDisplayList();
-	//SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 255, 255, 255, 255);
 }
 
 void Scene2::update()
 {
 
 	updateDisplayList();
+
 }
 
 void Scene2::clean()
@@ -58,17 +64,56 @@ void Scene2::handleEvents()
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3))
 	{
 		TheGame::Instance()->changeSceneState(END_SCENE);
-	}
-
+	}	
 }
 
 void Scene2::start()
 {
 	TextureManager::Instance()->load("../Assets/textures/background.png", "background");
 
+	m_pBall = new Ball();
+	addChild(m_pBall);
+
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
+}
 
+void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY, int32_t radius)
+{
+	const int32_t diameter = (radius * 2);
+
+	int32_t x = (radius - 1);
+	int32_t y = 0;
+	int32_t tx = 1;
+	int32_t ty = 1;
+	int32_t error = (tx - diameter);
+
+	while (x >= y)
+	{
+		//  Each of the following renders an octant of the circle
+		SDL_RenderDrawPoint(renderer, centreX + x, centreY - y);
+		SDL_RenderDrawPoint(renderer, centreX + x, centreY + y);
+		SDL_RenderDrawPoint(renderer, centreX - x, centreY - y);
+		SDL_RenderDrawPoint(renderer, centreX - x, centreY + y);
+		SDL_RenderDrawPoint(renderer, centreX + y, centreY - x);
+		SDL_RenderDrawPoint(renderer, centreX + y, centreY + x);
+		SDL_RenderDrawPoint(renderer, centreX - y, centreY - x);
+		SDL_RenderDrawPoint(renderer, centreX - y, centreY + x);
+
+		if (error <= 0)
+		{
+			++y;
+			error += ty;
+			ty += 2;
+		}
+
+		if (error > 0)
+		{
+			--x;
+			tx += 2;
+			error += (tx - diameter);
+		}
+	}
 }
 
 
@@ -104,3 +149,4 @@ void Scene2::GUI_Function()
 	ImGuiSDL::Render(ImGui::GetDrawData());
 	ImGui::StyleColorsDark();
 }
+

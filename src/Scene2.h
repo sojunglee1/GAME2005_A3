@@ -8,6 +8,7 @@
 #include "Detonator.h"
 #include "Button.h"
 #include "Label.h"
+#include "Ball.h"
 
 class Scene2 : public Scene
 {
@@ -22,6 +23,8 @@ public:
 	virtual void handleEvents() override;
 	virtual void start() override;
 
+	void DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY, int32_t radius);
+
 
 private:
 	// IMGUI Function
@@ -30,6 +33,10 @@ private:
 	std::string m_guiTitle;
 
 	glm::vec2 m_mousePosition;
+
+	SDL_Rect brick;
+
+	Ball* m_pBall;
 
 };
 

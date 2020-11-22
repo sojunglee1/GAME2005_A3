@@ -9,6 +9,7 @@ enum GameObjectType {
 	PLANE,
 	ENEMY,
 	BULLET,
+	BALL,
 	DETONATOR,
 	START_BUTTON,
 	RESTART_BUTTON,

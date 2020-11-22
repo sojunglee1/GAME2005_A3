@@ -54,13 +54,13 @@ void StartScene::handleEvents()
 	{
 		TheGame::Instance()->changeSceneState(END_SCENE);
 	}
-
 }
 
 void StartScene::start()
 {
 	const SDL_Color blue = { 0, 0, 255, 255 };
 	const SDL_Color red = { 255, 0, 0, 255 };
+
 	m_pStartLabel = new Label("START SCENE", "Consolas", 80, blue, glm::vec2(400.0f, 40.0f));
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);

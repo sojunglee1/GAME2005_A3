@@ -95,6 +95,9 @@ void Scene1::handleEvents()
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_3)){
 		TheGame::Instance()->changeSceneState(END_SCENE);
 	}
+
+
+
 }
 
 void Scene1::start()
