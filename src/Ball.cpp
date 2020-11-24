@@ -15,6 +15,7 @@ Ball::Ball()
 	getRigidBody()->isColliding = false;
 	getRigidBody()->mass = 1.0;
 	setType(BALL);
+	vfac = 0.75;
 }
 
 Ball::~Ball()
@@ -41,25 +42,25 @@ void Ball::update()
 	if (getTransform()->position.x > 800 - getWidth())
 	{
 		getTransform()->position.x = 800 - getWidth();
-		getRigidBody()->velocity.x *= -0.75; // how much energy is lost (when hit the window sides)
+		getRigidBody()->velocity.x *= -vfac; // how much energy is lost (when hit the window sides)
 	}
 
 	if (getTransform()->position.x < 0)
 	{
 		getTransform()->position.x = 0;
-		getRigidBody()->velocity.x *= -0.75; // how much energy is lost (when hit the window sides)
+		getRigidBody()->velocity.x *= -vfac; // how much energy is lost (when hit the window sides)
 	}
 
 	if (getTransform()->position.y > 600 - getHeight())
 	{
 		getTransform()->position.y = 600 - getHeight();
-		getRigidBody()->velocity.y *= -0.75; // how much energy is lost (when hit the window top or bottom)
+		getRigidBody()->velocity.y *= -vfac; // how much energy is lost (when hit the window top or bottom)
 	}
 
 	if (getTransform()->position.y < 0)
 	{
 		getTransform()->position.y = 0;
-		getRigidBody()->velocity.y *= -0.75; // how much energy is lost (when hit the window top or bottom)
+		getRigidBody()->velocity.y *= -vfac; // how much energy is lost (when hit the window top or bottom)
 	}
 }
 

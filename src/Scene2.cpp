@@ -37,7 +37,16 @@ void Scene2::draw()
 
 void Scene2::update()
 {
-
+	if (m_pBall->getTransform()->position.x > brick.w)
+	{
+		m_pBall->getTransform()->position.x = brick.w;
+		m_pBall->getRigidBody()->velocity.x *= -0.75;
+	}
+	if (m_pBall->getTransform()->position.y > brick.y)
+	{
+		m_pBall->getTransform()->position.y = brick.y;
+		m_pBall->getRigidBody()->velocity.y *= -0.75;
+	}
 	updateDisplayList();
 
 }
@@ -119,6 +128,10 @@ void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY
 	}
 }
 
+void Scene2::bounce()
+{
+	
+}
 
 void Scene2::GUI_Function()
 {

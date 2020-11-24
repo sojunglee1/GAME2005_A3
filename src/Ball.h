@@ -16,7 +16,7 @@ public:
 	virtual void clean() override;
 
 	// setters
-	
+	float vfac;
 
 private:
 
