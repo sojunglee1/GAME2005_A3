@@ -5,6 +5,7 @@
 #include "imgui.h"
 #include "imgui_sdl.h"
 #include "Renderer.h"
+#include "CollisionManager.h"
 
 Scene2::Scene2()
 {
@@ -21,13 +22,13 @@ void Scene2::draw()
 		GUI_Function();
 	}
 
-	brick.x = EventManager::Instance().getMousePosition().x - brick.w / 2,
-	brick.y = EventManager::Instance().getMousePosition().y,
-	brick.w = 150,
-	brick.h = 15;
+	//brick.x = EventManager::Instance().getMousePosition().x - brick.w / 2,
+	//brick.y = EventManager::Instance().getMousePosition().y,
+	//brick.w = 150,
+	//brick.h = 15;
 
-	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 0, 0, 255, 255);
-	SDL_RenderFillRect(Renderer::Instance()->getRenderer(), &brick);
+	/*SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 0, 0, 255, 255);
+	SDL_RenderFillRect(Renderer::Instance()->getRenderer(), &brick);*/
 
 
 	SDL_SetRenderDrawColor(Renderer::Instance()->getRenderer(), 255, 255, 255, 255);
@@ -37,16 +38,7 @@ void Scene2::draw()
 
 void Scene2::update()
 {
-	if (m_pBall->getTransform()->position.x > brick.w)
-	{
-		m_pBall->getTransform()->position.x = brick.w;
-		m_pBall->getRigidBody()->velocity.x *= -0.75;
-	}
-	if (m_pBall->getTransform()->position.y > brick.y)
-	{
-		m_pBall->getTransform()->position.y = brick.y;
-		m_pBall->getRigidBody()->velocity.y *= -0.75;
-	}
+	bounce();
 	updateDisplayList();
 
 }
@@ -87,7 +79,8 @@ void Scene2::start()
 
 	m_pBall = new Ball();
 	addChild(m_pBall);
-
+	m_pBrick = new Brick();
+	addChild(m_pBrick);
 }
 
 void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY, int32_t radius)
@@ -130,6 +123,20 @@ void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY
 
 void Scene2::bounce()
 {
+	//if (m_pBall->getTransform()->position.x > brick.w)
+	//{
+	//	m_pBall->getTransform()->position.x = brick.w;
+	//	m_pBall->getRigidBody()->velocity.x *= -0.75;
+	//}
+
+	//if (m_pBall->getTransform()->position.y > brick.y)
+	//{
+	//	m_pBall->getTransform()->position.y = brick.y;
+	//	m_pBall->getRigidBody()->velocity.y *= -1.0;
+	//}
+
+	newVelocity = m_pBall->getRigidBody()->velocity - m_pBrick->getRigidBody()->velocity;
+
 	
 }
 

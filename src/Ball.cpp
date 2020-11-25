@@ -1,6 +1,7 @@
 #include "Ball.h"
 #include "TextureManager.h"
-
+#include "Brick.h"
+#include "CollisionManager.h"
 Ball::Ball()
 {
 	TextureManager::Instance()->load("../Assets/textures/Circle.png", "circle");
@@ -61,6 +62,10 @@ void Ball::update()
 	{
 		getTransform()->position.y = 0;
 		getRigidBody()->velocity.y *= -vfac; // how much energy is lost (when hit the window top or bottom)
+	}
+	if (CollisionManager::AABBCheck(GameObject* brick, Ball* ball)
+	{
+
 	}
 }
 

@@ -9,6 +9,7 @@
 #include "Button.h"
 #include "Label.h"
 #include "Ball.h"
+#include "Brick.h"
 
 class Scene2 : public Scene
 {
@@ -31,12 +32,14 @@ private:
 	void GUI_Function();
 
 	std::string m_guiTitle;
-
+	glm::vec2 newVelocity;
+	glm::vec2 newPos;
 	glm::vec2 m_mousePosition;
 
-	SDL_Rect brick;
+	/*SDL_Rect brick;*/
 
 	Ball* m_pBall;
+	Brick* m_pBrick;
 
 };
 
