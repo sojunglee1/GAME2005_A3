@@ -136,6 +136,8 @@ void Scene2::bounce()
 		newPos.y =+ m_pBall->getRigidBody()->velocity.y * deltaTime;
 		newPos = newPos - m_pBall->getTransform()->position;*/
 		m_pBall->getTransform()->position = newPos;
+		std::cout << "Brick's x velocity: " << m_pBrick->getRigidBody()->velocity.x << std::endl;
+		std::cout << "Brick's y velocity: " << m_pBrick->getRigidBody()->velocity.y << std::endl;
 	}
 }
 

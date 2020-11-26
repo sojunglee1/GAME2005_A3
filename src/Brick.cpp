@@ -9,7 +9,7 @@ Brick::Brick()
 	setWidth(size.x);
 	setHeight(size.y);
 	getTransform()->position = glm::vec2(0.0f, 0.0f);
-	getRigidBody()->velocity = glm::vec2(0.0f, 0.0f);
+	getRigidBody()->velocity = glm::vec2(50.0f, 50.0f);
 	getRigidBody()->acceleration = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->isColliding = false;
 	getRigidBody()->mass = 1.0;
