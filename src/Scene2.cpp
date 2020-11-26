@@ -128,13 +128,9 @@ void Scene2::bounce()
 	{
 		const float deltaTime = 1.0f / 60.f;
 		std::cout << "ball hits brick" << std::endl;
-		newVelocity = -m_pBall->getRigidBody()->velocity + m_pBrick->getRigidBody()->velocity;
+		newVelocity = -m_pBall->getRigidBody()->velocity - m_pBrick->getRigidBody()->velocity;
 		m_pBall->getRigidBody()->velocity = newVelocity;
 		glm::vec2 newPos = m_pBall->getTransform()->position + (m_pBall->getRigidBody()->velocity * deltaTime);
-	/*	glm::vec2 newPos = m_pBall->getTransform()->position;
-		newPos.x =+ m_pBall->getRigidBody()->velocity.x * deltaTime;
-		newPos.y =+ m_pBall->getRigidBody()->velocity.y * deltaTime;
-		newPos = newPos - m_pBall->getTransform()->position;*/
 		m_pBall->getTransform()->position = newPos;
 		std::cout << "Brick's x velocity: " << m_pBrick->getRigidBody()->velocity.x << std::endl;
 		std::cout << "Brick's y velocity: " << m_pBrick->getRigidBody()->velocity.y << std::endl;
