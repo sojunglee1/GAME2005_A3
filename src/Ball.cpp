@@ -63,10 +63,6 @@ void Ball::update()
 		getTransform()->position.y = 0;
 		getRigidBody()->velocity.y *= -vfac; // how much energy is lost (when hit the window top or bottom)
 	}
-	if (CollisionManager::AABBCheck(GameObject* brick, Ball* ball)
-	{
-
-	}
 }
 
 void Ball::clean()

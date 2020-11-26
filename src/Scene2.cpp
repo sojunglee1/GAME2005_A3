@@ -6,6 +6,7 @@
 #include "imgui_sdl.h"
 #include "Renderer.h"
 #include "CollisionManager.h"
+#include "Util.h"
 
 Scene2::Scene2()
 {
@@ -123,21 +124,19 @@ void Scene2::DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY
 
 void Scene2::bounce()
 {
-	//if (m_pBall->getTransform()->position.x > brick.w)
-	//{
-	//	m_pBall->getTransform()->position.x = brick.w;
-	//	m_pBall->getRigidBody()->velocity.x *= -0.75;
-	//}
-
-	//if (m_pBall->getTransform()->position.y > brick.y)
-	//{
-	//	m_pBall->getTransform()->position.y = brick.y;
-	//	m_pBall->getRigidBody()->velocity.y *= -1.0;
-	//}
-
-	newVelocity = m_pBall->getRigidBody()->velocity - m_pBrick->getRigidBody()->velocity;
-
-	
+	if (CollisionManager::AABBCheck(m_pBall, m_pBrick))
+	{
+		const float deltaTime = 1.0f / 60.f;
+		std::cout << "ball hits brick" << std::endl;
+		newVelocity = -m_pBall->getRigidBody()->velocity + m_pBrick->getRigidBody()->velocity;
+		m_pBall->getRigidBody()->velocity = newVelocity;
+		glm::vec2 newPos = m_pBall->getTransform()->position + (m_pBall->getRigidBody()->velocity * deltaTime);
+	/*	glm::vec2 newPos = m_pBall->getTransform()->position;
+		newPos.x =+ m_pBall->getRigidBody()->velocity.x * deltaTime;
+		newPos.y =+ m_pBall->getRigidBody()->velocity.y * deltaTime;
+		newPos = newPos - m_pBall->getTransform()->position;*/
+		m_pBall->getTransform()->position = newPos;
+	}
 }
 
 void Scene2::GUI_Function()

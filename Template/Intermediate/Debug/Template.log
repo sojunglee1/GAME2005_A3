@@ -1,22 +1,3 @@
-﻿  Brick.cpp
-C:\Users\maduo\Documents\Game Physics\GAME2005_A3\src\Brick.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\maduo\Documents\Game Physics\GAME2005_A3\src\Brick.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\maduo\Documents\Game Physics\GAME2005_A3\src\Brick.cpp(28,47): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\maduo\Documents\Game Physics\GAME2005_A3\src\Brick.cpp(28,44): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
+﻿  Scene2.cpp
+C:\Users\maduo\Documents\Game Physics\GAME2005_A3\src\Scene1.h(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Template.vcxproj -> C:\Users\maduo\Documents\Game Physics\GAME2005_A3\bin\Debug\Template.exe

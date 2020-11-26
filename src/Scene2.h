@@ -33,7 +33,7 @@ private:
 
 	std::string m_guiTitle;
 	glm::vec2 newVelocity;
-	glm::vec2 newPos;
+	glm::vec2 direction;
 	glm::vec2 m_mousePosition;
 
 	/*SDL_Rect brick;*/
